@@ -37,3 +37,4 @@ next-env.d.ts
 # editor/tooling
 .kiro/
 .vscode/
+skills-lock.json
