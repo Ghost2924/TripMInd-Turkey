@@ -1,22 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TripMind Turkey
 
-## Getting Started
+AI-powered travel planner for Turkey. Enter your trip details and get a personalized day-by-day itinerary with budget breakdown and halal-friendly dining.
 
-First, run the development server:
+**Destinations:** Istanbul · Cappadocia · Antalya · Ephesus · Pamukkale · Bodrum
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Features
+
+- Day-by-day itinerary based on your duration, budget, cities, interests, and pace
+- Halal restaurant suggestions
+- Automatic hotel and transport assignments
+- Budget breakdown per day and category
+
+---
+
+## Tech stack
+
+- Next.js 14, TypeScript, Tailwind CSS
+- OpenAI (structured JSON output)
+- Local JSON data (hotels, restaurants, attractions, transportation)
+
+---
+
+## Getting started
+
+1. Install dependencies:
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create a `.env.local` file and add your OpenAI API key:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+OPENAI_API_KEY=your_key_here
+```
 
+3. Run the app:
 
+```
+npm run dev
+```
 
+Open [http://localhost:3000](http://localhost:3000).
