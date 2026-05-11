@@ -1,0 +1,214 @@
+[
+  {
+    "id": "TC01",
+    "description": "3-day Istanbul trip, moderate pace, history + halal food",
+    "input": {
+      "duration": 3,
+      "budget_usd": 800,
+      "travelers": 2,
+      "cities": ["Istanbul"],
+      "interests": ["history", "halal food"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "day_count": 3,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["history", "halal food"]
+    }
+  },
+  {
+    "id": "TC02",
+    "description": "5-day multi-city trip, packed pace, nature + culture",
+    "input": {
+      "duration": 5,
+      "budget_usd": 2000,
+      "travelers": 2,
+      "cities": ["Istanbul", "Cappadocia"],
+      "interests": ["nature", "culture"],
+      "pace": "packed"
+    },
+    "expected": {
+      "day_count": 5,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["nature", "culture"]
+    }
+  },
+  {
+    "id": "TC03",
+    "description": "7-day relaxed trip, Antalya + Pamukkale, nature + shopping",
+    "input": {
+      "duration": 7,
+      "budget_usd": 1500,
+      "travelers": 1,
+      "cities": ["Antalya", "Pamukkale"],
+      "interests": ["nature", "shopping"],
+      "pace": "relaxed"
+    },
+    "expected": {
+      "day_count": 7,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["nature", "shopping"]
+    }
+  },
+  {
+    "id": "TC04",
+    "description": "1-day Istanbul, moderate, halal food only",
+    "input": {
+      "duration": 1,
+      "budget_usd": 200,
+      "travelers": 1,
+      "cities": ["Istanbul"],
+      "interests": ["halal food"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "day_count": 1,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["halal food"]
+    }
+  },
+  {
+    "id": "TC05",
+    "description": "10-day grand tour all cities, packed, all interests",
+    "input": {
+      "duration": 10,
+      "budget_usd": 5000,
+      "travelers": 2,
+      "cities": ["Istanbul", "Cappadocia", "Antalya", "Ephesus", "Pamukkale", "Bodrum"],
+      "interests": ["history", "halal food", "shopping", "nature", "culture"],
+      "pace": "packed"
+    },
+    "expected": {
+      "day_count": 10,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["history", "halal food", "shopping", "nature", "culture"]
+    }
+  },
+  {
+    "id": "TC06",
+    "description": "4-day Cappadocia + Ephesus, moderate, history + culture",
+    "input": {
+      "duration": 4,
+      "budget_usd": 1200,
+      "travelers": 3,
+      "cities": ["Cappadocia", "Ephesus"],
+      "interests": ["history", "culture"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "day_count": 4,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["history", "culture"]
+    }
+  },
+  {
+    "id": "TC07",
+    "description": "2-day Bodrum, relaxed, nature + shopping",
+    "input": {
+      "duration": 2,
+      "budget_usd": 600,
+      "travelers": 2,
+      "cities": ["Bodrum"],
+      "interests": ["nature", "shopping"],
+      "pace": "relaxed"
+    },
+    "expected": {
+      "day_count": 2,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["nature", "shopping"]
+    }
+  },
+  {
+    "id": "TC08",
+    "description": "6-day Istanbul + Ephesus, moderate, history + halal food + culture",
+    "input": {
+      "duration": 6,
+      "budget_usd": 2500,
+      "travelers": 4,
+      "cities": ["Istanbul", "Ephesus"],
+      "interests": ["history", "halal food", "culture"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "day_count": 6,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["history", "halal food", "culture"]
+    }
+  },
+  {
+    "id": "TC09",
+    "description": "3-day Pamukkale + Bodrum, packed, nature",
+    "input": {
+      "duration": 3,
+      "budget_usd": 900,
+      "travelers": 2,
+      "cities": ["Pamukkale", "Bodrum"],
+      "interests": ["nature"],
+      "pace": "packed"
+    },
+    "expected": {
+      "day_count": 3,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["nature"]
+    }
+  },
+  {
+    "id": "TC10",
+    "description": "8-day Istanbul + Cappadocia + Antalya, moderate, all interests",
+    "input": {
+      "duration": 8,
+      "budget_usd": 3000,
+      "travelers": 2,
+      "cities": ["Istanbul", "Cappadocia", "Antalya"],
+      "interests": ["history", "halal food", "shopping", "nature", "culture"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "day_count": 8,
+      "budget_not_exceeded": true,
+      "all_segments_present": true,
+      "interests_covered": ["history", "halal food", "shopping", "nature", "culture"]
+    }
+  },
+  {
+    "id": "TC11",
+    "description": "Validation: invalid city should return 400",
+    "input": {
+      "duration": 3,
+      "budget_usd": 800,
+      "travelers": 1,
+      "cities": ["Paris"],
+      "interests": ["history"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "http_status": 400,
+      "success": false
+    }
+  },
+  {
+    "id": "TC12",
+    "description": "Validation: duration 0 should return 400",
+    "input": {
+      "duration": 0,
+      "budget_usd": 500,
+      "travelers": 1,
+      "cities": ["Istanbul"],
+      "interests": ["history"],
+      "pace": "moderate"
+    },
+    "expected": {
+      "http_status": 400,
+      "success": false
+    }
+  }
+]

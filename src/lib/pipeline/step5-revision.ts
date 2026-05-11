@@ -143,7 +143,7 @@ Please produce a corrected itinerary that resolves all the failures above while 
   const rawResponse = await callLLM({
     systemPrompt: SYSTEM_PROMPT,
     userPrompt,
-    maxTokens: 1500,
+    maxTokens: 4000,
     schema: ITINERARY_SCHEMA,
   });
 

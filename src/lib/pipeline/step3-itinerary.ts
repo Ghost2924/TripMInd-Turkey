@@ -123,7 +123,7 @@ Please create a complete day-by-day itinerary using only the hotels, restaurants
   const rawResponse = await callLLM({
     systemPrompt: SYSTEM_PROMPT,
     userPrompt,
-    maxTokens: 1500,
+    maxTokens: 4000,
     schema: ITINERARY_SCHEMA,
   });
 

@@ -41,8 +41,8 @@ function getClient(): OpenAI {
 export async function callLLM(options: LLMCallOptions): Promise<string> {
   const { systemPrompt, userPrompt, maxTokens } = options;
 
-  // Clamp to the per-call token budget defined in Requirement 11.5
-  const clampedMaxTokens = Math.min(maxTokens, 1500);
+  // Cap tokens — itinerary steps pass higher values for long trips
+  const clampedMaxTokens = Math.min(maxTokens, 4000);
 
   const client = getClient();
 
