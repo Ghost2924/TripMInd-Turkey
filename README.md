@@ -25,7 +25,13 @@ AI-powered travel planner for Turkey. Enter your trip details and get a personal
 
 ## Getting started
 
-1. Install dependencies:
+1. Navigate into the project folder:
+
+```
+cd TripMInd-Turkey
+```
+
+2. Install dependencies:
 
 ```
 npm install
